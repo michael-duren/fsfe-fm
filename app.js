@@ -24,7 +24,7 @@ wss.on('connection', function connection(ws) {
   wss.broadcast(`Current visitors: ${numClients}`);
 
   if (ws.readyState === ws.OPEN) {
-    ws.send('Welcome to cyber chat');
+    ws.send(`Welcome to cyber chat you are user number: ${numClients}`);
   }
 
   ws.on('close', function close() {
