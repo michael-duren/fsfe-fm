@@ -9,6 +9,7 @@
 
 <body>
 	<h1>Hello Buddy Goober</h1>
+	<h2 id="messages"></h2>
 
 </body>
 
@@ -18,7 +19,7 @@
 	ws = new WebSocket(`${proto}://${window.location.host}`);
 
 	ws.onmessage = (event) => {
-		console.log(event.data);
+		document.getElementById("messages").innerHTML = event.data;
 	}
 </script>
 
